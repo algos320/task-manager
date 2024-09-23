@@ -16,6 +16,7 @@
     <description>task-manager</description>
     <modules>
         <module>external</module>
+        <module>core</module>
     </modules>
     <properties>
         <java.version>21</java.version>
