@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "f28590cf-ed92-46c7-a5aa-60bb08d99392",
+		"name": "Task manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16277992"
+	},
+	"item": [
+		{
+			"name": "get all task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/task",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 0,\n    \"name\": \"string\",\n    \"status\": \"NEW\",\n    \"createdAt\": \"2024-09-24T10:58:29.494Z\",\n    \"updatedAt\": \"2024-09-24T10:58:29.494Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/task",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateByField",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"name\": \"int\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/task",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTaskStatus",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"status\": \"COMPLETED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/task",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/task/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"task",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
