@@ -1,4 +1,4 @@
-package com.example.core;
+package com.example.core.mapper;
 
 import com.example.core.dto.TaskDTO;
 import com.example.core.entity.Task;
@@ -8,5 +8,6 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface TaskMapper {
-    List<TaskDTO> mapToDTO(List<Task> task);
+    TaskDTO mapToDTO(Task task);
+    Task mapToEntity(TaskDTO taskDTO);
 }
